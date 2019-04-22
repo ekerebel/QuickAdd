@@ -1,0 +1,17 @@
+<!-- apexImperativeMethod.html -->
+<template>
+    <lightning-card title="Quote Card" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            
+            <lightning-textarea value={myProductCodes} onchange={handleChangeProducts} label="List Comma Separated Product Codes:" maxlength="3000"></lightning-textarea>
+            
+            <p class="slds-m-bottom_small">
+                    <lightning-button label="Add Products" onclick={handleAdd}></lightning-button>
+            </p>
+            <template if:true={loading}> 
+                    <lightning-spinner label="Loading"></lightning-spinner>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
